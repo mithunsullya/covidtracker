@@ -1,0 +1,29 @@
+@import './../../colors';
+
+
+.footer__items {
+    padding: 30px 0;
+    .strike {
+        height: 1px;
+        width: 100%;
+        background: $color--border;
+        flex: 0 0 80%;
+        @include bp-medium() {
+            flex: 0 0 30%;
+        }
+    }
+    .footer__info {
+        flex: 0 0 100%;
+        text-align: center;
+        padding: 30px;
+        @include bp-medium() {
+            flex: 0 0 30%;
+            padding: 0;
+        }
+    }
+}
+.copyrights {
+    font-size: $font-size--xs;
+    color: $color--pale-black;
+    padding-bottom: 30px;
+}

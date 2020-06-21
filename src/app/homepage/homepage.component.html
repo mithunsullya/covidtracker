@@ -1,0 +1,67 @@
+<div class="main">
+  <div class="heading">
+    <div class="heading-item">State</div>
+    <div class="heading-item">Confirmed</div>
+    <div class="heading-item">Active</div>
+    <div class="heading-item">Recovered</div>
+    <div class="heading-item">Deceased</div>
+  </div>
+  <div class="states">
+
+  <div
+    *ngFor="let status of stateInfo; index as index"
+    (click)="getDistricts(status.state, index)"
+    class="state-list"
+  >
+    <div class="state-item">{{ status.state }}</div>
+
+    <div class="state-item ">
+      {{ status.confirmed }}
+      <span class="delta">(+{{ status.deltaconfirmed }})</span>
+    </div>
+
+    <div class="state-item">{{ status.active }}</div>
+
+    <div class="state-item">
+      {{ status.recovered }}
+      <span class="delta">(+{{ status.deltarecovered }})</span>
+    </div>
+
+    <div class="state-item">
+      {{ status.deaths }}
+      <span class="delta">(+{{ status.deltadeaths }})</span>
+    </div>
+
+    <div *ngIf="index == indexValue && index!= 0" class="district-list">
+      <div class="district-item">
+        <div *ngFor="let name of districtNames" class="item">
+          {{ name }}
+        </div>
+      </div>
+      <div class="district-item">
+        <div *ngFor="let confirmed of districtDetails" class="item confirmed">
+          {{ confirmed.confirmed }}
+          <span class="delta">(+{{ confirmed.delta.confirmed }})</span>
+        </div>
+      </div>
+      <div class="district-item">
+        <div *ngFor="let active of districtDetails" class="item active">
+          {{ active.active }}
+        </div>
+      </div>
+      <div class="district-item">
+        <div *ngFor="let recovered of districtDetails" class="item recovered">
+          {{ recovered.recovered }}
+          <span class="delta">(+{{ recovered.delta.recovered }})</span>
+        </div>
+      </div>
+      <div class="district-item">
+        <div *ngFor="let deceased of districtDetails" class="item deceased">
+          {{ deceased.deceased }}
+          <span class="delta">(+{{ deceased.delta.deceased }})</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

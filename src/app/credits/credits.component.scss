@@ -1,0 +1,16 @@
+@import "./../variables";
+
+.credit__heading {
+  max-width: 960px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.credits {
+  padding-bottom: 60px;
+  margin: auto;
+  max-width: 760px;
+  p {
+    font-size: $font-size--base;
+  }
+}

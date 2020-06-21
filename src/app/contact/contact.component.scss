@@ -1,0 +1,33 @@
+@import './../colors';
+
+.contact {
+    padding: 0 30px;
+}
+
+.contact__heading {
+    padding: 30px 0 20px;
+    font: $font-size--medium $font--semibold;
+
+    @include bp-medium() {
+        padding: 40px 0 30px;
+        font: $font-size--subtitle $font--semibold;
+    }
+}
+
+form {
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    @include bp-medium() {
+        padding: 60px 80px;
+    }
+}
+
+.contact__info {
+    max-width: 960px;
+    margin: auto;
+    font: $font-size--l $font--regular;
+    line-height: 1.75;
+    margin-bottom: 40px;
+}

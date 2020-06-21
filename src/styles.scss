@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1240px
+) !default;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import './app/fontface';
+@import "./app/colors";
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  font-family: "PoppinsMedium";
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  &:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  background: $color--ghostwhite;
+}
+
+header {
+  background: $color--primary;
+  position: relative;
+}

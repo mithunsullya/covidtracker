@@ -1,0 +1,27 @@
+/**
+ * Font typeface declarations.
+ */
+
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url('./assets/fonts/Poppins/Poppins-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Poppins/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PoppinsMedium';
+  src: url('./assets/fonts/Poppins/Poppins-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Poppins/Poppins-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PoppinsSemiBold';
+  src: url('./assets/fonts/Poppins/Poppins-SemiBold.woff2') format('woff2'),
+    url('./assets/fonts/Poppins/Poppins-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}

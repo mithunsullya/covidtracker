@@ -1,0 +1,51 @@
+<div class="contact">
+  <h1 class="contact__heading text-center">Get in touch</h1>
+  <p @fade class="contact__info text-center">Thanks for wanting to get in touch! You can reach out to me via the contact form below regarding the set of services I provide. 
+      I will try to reach out to you within 2-3 days.</p>
+  <form @fade method="POST" action="https://formspree.io/mrgypejg" target="_blank"  [formGroup]="contactForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        id="email"
+        aria-describedby="emailHelp"
+        formControlName="email"
+      />
+      <div  *ngIf="email.touched && !email.valid">
+        <div class="alert alert-danger">Email is required</div>
+      </div>
+    </div>
+    <!-- <div *ngIf="contactForm.errors.required"> -->
+<!-- </div> -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        id="name"
+        name="name"
+      />
+      <div *ngIf="name.touched && !name.valid">
+        <div class="alert alert-danger">Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input
+          type="tel"
+          class="form-control"
+          id="phone"
+          name="phone"
+          formControlName="phone"
+        />
+      </div>
+    <div class="form-group">
+        <label for="phone">Message</label>
+        <textarea name="message" id="message" class="form-control" cols="30" rows="5" name="message" formControlName="message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,100 @@
+@import "./../variables";
+@import "./../colors";
+
+.main {
+  width: 100%;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.heading {
+  display: flex;
+  text-align: center;
+  background: $color--magenta;
+  padding: 12px 0;
+  color: white;
+  width: 620px;
+  margin: auto;
+  box-shadow: 0 3px 7px $color--magenta;
+  &-item {
+    flex: 0 0 20%;
+    font-size: $font-size--l;
+  }
+}
+
+.state-list, .district-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px 5px;
+  text-align: center;
+  width: 620px;
+  margin: auto;
+  box-shadow: 0 3px 7px rgba($color: #000000, $alpha: 0.8);
+
+  .state-item, .district-item {
+    flex: 0 0 20%;
+    .delta {
+      font-family: "PoppinsRegular";
+      font-size: $font-size--xxxs;
+      padding-left: 4px;
+    }
+  }
+}
+
+.state-list {
+  cursor: pointer;
+  &:nth-child(2n) {
+    background-color: rgba(108,117,125,.7);
+    color: white;
+  }
+}
+
+.district-list {
+  flex-wrap: nowrap;
+  width: 620px;
+  margin: 10px 0;
+  background-color: $color--white;
+  color: $color--primary;
+
+  .item {
+    min-height: 42px;
+  }
+}
+
+.states {
+  .state-list {
+    &:first-child {
+      color: $color--red;
+      .state-item {
+        font-size: $font-size--base;
+        &:nth-child(3) {
+          color: blue;
+        }
+        &:nth-child(4) {
+          color: green;
+        }
+        &:nth-child(5) {
+          color: grey;
+        }
+      }
+    }
+  }
+
+}
+
+.confirmed {
+  color: $color--red;
+}
+.active {
+  color: $color--blue;
+}
+
+.recovered {
+  color: $color--green;
+}
+
+.deceased {
+  color: grey;
+  opacity: 0.6;
+}
